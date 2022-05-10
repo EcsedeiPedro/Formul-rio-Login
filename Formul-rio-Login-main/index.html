@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Criar Uma Conta</h2>
+        <img src="./Logo.png" alt="pinto" id="logo" />
+      </div>
+
+      <form
+        id="form"
+        class="form"
+        method="post"
+        action="mailto:pedro.martins55757@gmail.com"
+      >
+        <div class="form-control">
+          <label for="username">Nome de usuário</label>
+          <input
+            onchange="verificaUsuario()"
+            type="text"
+            id="username"
+            placeholder="Digite seu nome de usuário..."
+            minlength="7"
+            maxlength="14"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            onchange="verificaEmail()"
+            type="email"
+            id="email"
+            placeholder="Digite seu email.."
+            required
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password">Senha</label>
+          <input
+            onchange="verificaSenha()"
+            type="password"
+            id="password"
+            placeholder="Digite sua senha..."
+            required
+            minlength="7"
+            maxlength="14"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="senhaConfirma">Confirmação de senha</label>
+          <input
+            oninput="confirmaSenha()"
+            type="password"
+            id="senhaConfirma"
+            placeholder="Digite sua senha novamente..."
+            required
+            minlength="7"
+            maxlength="14"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control gender">
+          <label for="gender">Qual seu Gênero?</label>
+          <select name="gender" id="gender">
+            <option value="M" selected>Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/94d5240b71.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
